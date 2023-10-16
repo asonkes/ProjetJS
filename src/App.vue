@@ -1,5 +1,5 @@
 <template>
-  <MenuNav :connected="logged"></MenuNav>
+  <MenuNav></MenuNav>
   <router-view></router-view>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   },
   data() {
     return {
-      logged: true
+
     }
   }
 }
