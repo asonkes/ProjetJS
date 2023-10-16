@@ -1,9 +1,21 @@
 <script>
+import ConnectTop from './ConnectTop.vue'
+
 export default {
   name: 'MenuNav',
-  props: {
-    connected: Boolean
+  data(){
+    return {
+      connected: false
+    }
   },
+  methods: {
+    changeConnect(state){
+      this.connected = state
+    }
+  },
+  components: {
+    ConnectTop
+  }
 }
 </script>
 
@@ -13,6 +25,7 @@ export default {
     <li><router-link to="/realisations">Réalisations</router-link></li>
     <li><router-link to="/contact">Contact</router-link></li>
     <li v-if="connected"><router-link to="/espace-pro">Espace pro</router-link></li>
+    <ConnectTop :connected="connected" :changeConnect="changeConnect"></ConnectTop>
   </ul>
 </template>
 
