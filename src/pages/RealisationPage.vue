@@ -6,14 +6,14 @@
 export default {
   name: 'RealisationPage',
   props: {
-
+  
   }
 }
 </script>
 
 <style scoped>
   h1{
-    margin-top: 200px;
-    text-align: center;
+      margin-top: 200px;
+      text-align: center;
   }
 </style>
